@@ -13,6 +13,7 @@ import okhttp3.logging.HttpLoggingInterceptor
 import okhttp3.logging.HttpLoggingInterceptor.Level.BODY
 import okhttp3.logging.HttpLoggingInterceptor.Level.NONE
 import retrofit2.Retrofit
+import retrofit2.adapter.rxjava2.RxJava2CallAdapterFactory
 import retrofit2.converter.gson.GsonConverterFactory
 import java.io.File
 import java.util.concurrent.TimeUnit
@@ -22,16 +23,17 @@ class NetworkModule {
 
     private val TIMEOUT = 60L
 
-    @Provides fun service(retrofit: Retrofit) = retrofit.create<GitBookService>(GitBookService::class.java)
+    @Provides fun service(retrofit: Retrofit): GitBookService = retrofit.create<GitBookService>(GitBookService::class.java)
 
-    @Provides fun retrofit(okHttpClient: OkHttpClient, gson: Gson) =
+    @Provides fun retrofit(okHttpClient: OkHttpClient, gson: Gson): Retrofit =
             Retrofit.Builder()
-                    .addConverterFactory(GsonConverterFactory.create(gson))
-                    .client(okHttpClient)
                     .baseUrl(BuildConfig.BASE_URL)
+                    .client(okHttpClient)
+                    .addConverterFactory(GsonConverterFactory.create(gson))
+                    .addCallAdapterFactory(RxJava2CallAdapterFactory.create())
                     .build()
 
-    @Provides fun gson() = GsonBuilder().create()
+    @Provides fun gson(): Gson = GsonBuilder().create()
 
     @Provides internal fun okHttpClient(httpLoggingInterceptor: HttpLoggingInterceptor, cache: Cache) =
             OkHttpClient.Builder()

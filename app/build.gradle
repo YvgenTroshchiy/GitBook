@@ -23,6 +23,7 @@ android {
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
     }
+    kapt { generateStubs = true }
     dataBinding { enabled = true }
 }
 
@@ -62,7 +63,7 @@ dependencies {
     // Net
     implementation 'com.google.code.gson:gson:2.8.2'
     implementation 'com.squareup.retrofit2:retrofit:2.3.0'
-    implementation 'com.squareup.retrofit2:adapter-rxjava:2.3.0'
+    implementation 'com.squareup.retrofit2:adapter-rxjava2:2.3.0'
     implementation('com.squareup.retrofit2:converter-gson:2.3.0') {
         exclude group: 'com.google.code.gson'
     }

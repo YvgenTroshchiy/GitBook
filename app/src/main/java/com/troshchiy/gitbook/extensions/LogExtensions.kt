@@ -1,5 +1,3 @@
-@file:JvmName("LogUtils")
-
 package com.troshchiy.gitbook.extensions
 
 import android.util.Log
