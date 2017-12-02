@@ -27,6 +27,7 @@ android {
 }
 
 ext.support_library_version = "26.1.0"
+ext.daggerVersion = '2.11'
 
 dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
@@ -36,6 +37,20 @@ dependencies {
     implementation "com.android.support:appcompat-v7:$support_library_version"
     implementation 'com.android.support.constraint:constraint-layout:1.0.2'
     implementation 'com.github.bumptech.glide:glide:4.3.1'
+//    kapt "com.android.databiding:compiler:2.3.0"
+
+    // Dagger
+    implementation "com.google.dagger:dagger:$daggerVersion"
+    implementation("com.google.dagger:dagger-android:$daggerVersion") {
+        exclude group: 'com.android.support'
+    }
+    implementation("com.google.dagger:dagger-android-support:$daggerVersion") {
+        exclude group: 'com.android.support'
+    }
+    kapt "com.google.dagger:dagger-compiler:$daggerVersion"
+    kapt "com.google.dagger:dagger-android-processor:$daggerVersion"
+    annotationProcessor "com.google.dagger:dagger-compiler:$daggerVersion"
+    annotationProcessor "com.google.dagger:dagger-android-processor:$daggerVersion"
 
     // RxJava
     implementation "io.reactivex.rxjava2:rxjava:2.1.6"

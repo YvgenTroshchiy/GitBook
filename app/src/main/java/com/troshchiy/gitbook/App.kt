@@ -1,9 +1,15 @@
 package com.troshchiy.gitbook
 
-import android.app.Application
 import android.os.StrictMode
+import com.troshchiy.gitbook.di.DaggerAppComponent
+import dagger.android.AndroidInjector
+import dagger.android.support.DaggerApplication
 
-class App : Application() {
+class App : DaggerApplication() {
+
+    override fun applicationInjector(): AndroidInjector<out DaggerApplication> {
+        return DaggerAppComponent.builder().application(this).build()
+    }
 
     override fun onCreate() {
         if (BuildConfig.DEBUG) setStrictMode()
