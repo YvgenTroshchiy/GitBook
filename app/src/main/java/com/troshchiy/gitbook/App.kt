@@ -11,9 +11,8 @@ class App : DaggerApplication() {
         lateinit var APP: App
     }
 
-    override fun applicationInjector(): AndroidInjector<out DaggerApplication> {
-        return DaggerAppComponent.builder().application(this).build()
-    }
+    override fun applicationInjector(): AndroidInjector<out DaggerApplication> =
+            DaggerAppComponent.builder().application(this).build()
 
     init {
         APP = this

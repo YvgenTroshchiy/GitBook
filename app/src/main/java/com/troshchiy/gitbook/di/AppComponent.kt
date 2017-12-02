@@ -13,8 +13,9 @@ import javax.inject.Singleton
 @Component(modules = [
     AppModule::class,
     NetworkModule::class,
+    ActivityBindingModule::class,
     AndroidSupportInjectionModule::class])
-public interface AppComponent : AndroidInjector<App> {
+interface AppComponent : AndroidInjector<App> {
 
     fun gitBookService(): GitBookService
 
