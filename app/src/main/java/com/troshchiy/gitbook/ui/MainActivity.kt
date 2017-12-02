@@ -1,7 +1,8 @@
-package com.troshchiy.gitbook
+package com.troshchiy.gitbook.ui
 
 import android.os.Bundle
 import android.support.v7.app.AppCompatActivity
+import com.troshchiy.gitbook.R
 
 class MainActivity : AppCompatActivity() {
 
