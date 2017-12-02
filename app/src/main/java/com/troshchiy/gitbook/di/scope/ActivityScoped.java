@@ -1,4 +1,6 @@
-package com.troshchiy.gitbook.di;
+package com.troshchiy.gitbook.di.scope;
+
+import com.troshchiy.gitbook.di.AppComponent;
 
 import java.lang.annotation.Documented;
 import java.lang.annotation.Retention;
