@@ -21,7 +21,7 @@ import java.util.concurrent.TimeUnit
 @Module
 class NetworkModule {
 
-    private val TIMEOUT = 60L
+    private val timeout = 60L
 
     @Provides fun service(retrofit: Retrofit): GitBookService = retrofit.create<GitBookService>(GitBookService::class.java)
 
@@ -37,9 +37,9 @@ class NetworkModule {
 
     @Provides internal fun okHttpClient(httpLoggingInterceptor: HttpLoggingInterceptor, cache: Cache) =
             OkHttpClient.Builder()
-                    .connectTimeout(TIMEOUT, TimeUnit.SECONDS)
-                    .readTimeout(TIMEOUT, TimeUnit.SECONDS)
-                    .writeTimeout(TIMEOUT, TimeUnit.SECONDS)
+                    .connectTimeout(timeout, TimeUnit.SECONDS)
+                    .readTimeout(timeout, TimeUnit.SECONDS)
+                    .writeTimeout(timeout, TimeUnit.SECONDS)
                     .addInterceptor(httpLoggingInterceptor)
                     .cache(cache)
                     .build()

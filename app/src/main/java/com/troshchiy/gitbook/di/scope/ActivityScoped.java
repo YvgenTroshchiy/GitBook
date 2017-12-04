@@ -16,5 +16,4 @@ import javax.inject.Scope;
 @Documented
 @Scope
 @Retention(RetentionPolicy.RUNTIME)
-public @interface ActivityScoped {
-}
+public @interface ActivityScoped {}

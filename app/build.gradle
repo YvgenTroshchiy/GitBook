@@ -27,6 +27,8 @@ android {
     dataBinding { enabled = true }
 }
 
+androidExtensions { experimental = true }
+
 ext.support_library_version = "26.1.0"
 ext.daggerVersion = '2.11'
 

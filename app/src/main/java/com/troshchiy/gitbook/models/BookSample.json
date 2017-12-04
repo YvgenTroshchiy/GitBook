@@ -1,0 +1,89 @@
+{
+  "id": "samypesse/how-to-create-an-operating-system",
+  "status": "published",
+  "name": "how-to-create-an-operating-system",
+  "title": "How to make an Operating System",
+  "description": "Learn how to write, test and run, an operating system in C++ and Assembly from scratch.",
+  "public": true,
+  "template": "base",
+  "topics": [
+    "programming",
+    "operating-system",
+    "c-c-plus-plus"
+  ],
+  "license": "apache-2",
+  "language": "en",
+  "locked": false,
+  "cover": {
+    "large": "/cover/book/samypesse/how-to-create-an-operating-system.jpg?build=1475412619608",
+    "small": "/cover/book/samypesse/how-to-create-an-operating-system.jpg?build=1475412619608&size=small"
+  },
+  "urls": {
+    "git": "https://git.gitbook.com/samypesse/how-to-create-an-operating-system.git",
+    "access": "https://www.gitbook.com/book/samypesse/how-to-create-an-operating-system",
+    "homepage": "https://samypesse.gitbooks.io/how-to-create-an-operating-system/",
+    "read": "https://www.gitbook.com/read/book/samypesse/how-to-create-an-operating-system",
+    "edit": "https://www.gitbook.com/book/samypesse/how-to-create-an-operating-system/edit",
+    "content": "https://samypesse.gitbooks.io/how-to-create-an-operating-system/content/",
+    "download": {
+      "epub": "https://www.gitbook.com/download/epub/book/samypesse/how-to-create-an-operating-system",
+      "mobi": "https://www.gitbook.com/download/mobi/book/samypesse/how-to-create-an-operating-system",
+      "pdf": "https://www.gitbook.com/download/pdf/book/samypesse/how-to-create-an-operating-system"
+    }
+  },
+  "counts": {
+    "stars": 1917,
+    "subscriptions": 523,
+    "updates": 81,
+    "discussions": 24,
+    "changeRequests": 0
+  },
+  "dates": {
+    "build": "2016-10-02T12:50:19.608Z",
+    "created": "2014-05-20T01:21:08.289Z"
+  },
+  "permissions": {
+    "edit": false,
+    "admin": false,
+    "important": false
+  },
+  "publish": {
+    "ebooks": true,
+    "defaultBranch": null,
+    "builder": null
+  },
+  "author": {
+    "id": "537aadc0556aa60200379f23",
+    "type": "User",
+    "username": "samypesse",
+    "name": "Samy Pessé",
+    "location": "Lyon, France",
+    "website": "http://samypesse.fr/",
+    "bio": "French guy, Co-founder of GitBook",
+    "verified": true,
+    "locked": false,
+    "site_admin": true,
+    "urls": {
+      "profile": "https://www.gitbook.com/@samypesse",
+      "stars": "https://www.gitbook.com/@samypesse/starred",
+      "avatar": "https://www.gitbook.com/@samypesse/avatar"
+    },
+    "permissions": {
+      "edit": null,
+      "admin": null
+    },
+    "dates": {
+      "created": "2014-05-20T01:20:00.478Z"
+    },
+    "counts": {
+    },
+    "twitter": {
+      "username": "SamyPesse"
+    },
+    "github": {
+      "username": "SamyPesse"
+    },
+    "google": {},
+    "facebook": {}
+  }
+}

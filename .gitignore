@@ -16,6 +16,7 @@ libs/
 /*/build
 /build
 /captures
+/*/*/debug
 /*/*/production
 *.iml
 *.iws
