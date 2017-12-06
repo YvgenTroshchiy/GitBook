@@ -1,25 +1,34 @@
 package com.troshchiy.gitbook
 
+import com.troshchiy.gitbook.di.AppComponent
 import com.troshchiy.gitbook.di.DaggerAppComponent
+import com.troshchiy.gitbook.extensions.getLogTag
+import com.troshchiy.gitbook.extensions.logW
 import com.troshchiy.gitbook.extensions.setStrictMode
+import com.troshchiy.gitbook.ui.books.MainActivity
 import dagger.android.AndroidInjector
 import dagger.android.support.DaggerApplication
+import javax.inject.Inject
 
 class App : DaggerApplication() {
 
+    private val tag = getLogTag<MainActivity>()
+
     companion object {
-        lateinit var APP: App
+        lateinit var component: AppComponent
     }
 
-    override fun applicationInjector(): AndroidInjector<out DaggerApplication> =
-            DaggerAppComponent.builder().application(this).build()
-
-    init {
-        APP = this
+    override fun applicationInjector(): AndroidInjector<out DaggerApplication> {
+        component = DaggerAppComponent.builder().application(this).build()
+        return component
     }
 
     override fun onCreate() {
         if (BuildConfig.DEBUG) setStrictMode()
         super.onCreate()
+    }
+
+    @Inject fun logInjection() {
+        logW(tag, "")
     }
 }

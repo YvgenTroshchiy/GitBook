@@ -17,15 +17,20 @@ import retrofit2.adapter.rxjava2.RxJava2CallAdapterFactory
 import retrofit2.converter.gson.GsonConverterFactory
 import java.io.File
 import java.util.concurrent.TimeUnit
+import javax.inject.Singleton
 
 @Module
+//(includes = NetworkModule.class)
+// TODO: Rename to GitBookServiceModule
 class NetworkModule {
 
     private val timeout = 60L
 
-    @Provides fun service(retrofit: Retrofit): GitBookService = retrofit.create<GitBookService>(GitBookService::class.java)
+    @Provides @Singleton
+    fun service(retrofit: Retrofit): GitBookService = retrofit.create<GitBookService>(GitBookService::class.java)
 
-    @Provides fun retrofit(okHttpClient: OkHttpClient, gson: Gson): Retrofit =
+    @Provides @Singleton
+    fun retrofit(okHttpClient: OkHttpClient, gson: Gson): Retrofit =
             Retrofit.Builder()
                     .baseUrl(BuildConfig.BASE_URL)
                     .client(okHttpClient)
@@ -35,7 +40,9 @@ class NetworkModule {
 
     @Provides fun gson(): Gson = GsonBuilder().create()
 
-    @Provides internal fun okHttpClient(httpLoggingInterceptor: HttpLoggingInterceptor, cache: Cache) =
+    //TODO: Move to NetworkModule
+    @Provides @Singleton
+    fun okHttpClient(httpLoggingInterceptor: HttpLoggingInterceptor, cache: Cache) =
             OkHttpClient.Builder()
                     .connectTimeout(timeout, TimeUnit.SECONDS)
                     .readTimeout(timeout, TimeUnit.SECONDS)
@@ -44,10 +51,16 @@ class NetworkModule {
                     .cache(cache)
                     .build()
 
-    @Provides fun loggingInterceptor() = HttpLoggingInterceptor().apply { level = if (BuildConfig.DEBUG) BODY else NONE }
+    //TODO: Move to NetworkModule
+    @Provides @Singleton
+    fun loggingInterceptor() = HttpLoggingInterceptor().apply { level = if (BuildConfig.DEBUG) BODY else NONE }
 
-    @Provides fun cache(cacheFile: File) = Cache(cacheFile, (10 * 1024 * 1024 /* 10MB Cache */).toLong())
+    //TODO: Move to NetworkModule
+    @Provides @Singleton
+    fun cache(cacheFile: File) = Cache(cacheFile, (10 * 1024 * 1024 /* 10MB Cache */).toLong())
 
-    @Provides fun cacheFile(context: Context): File = File(context.cacheDir, "okhttp_cache")
+    //TODO: Move to NetworkModule
+    @Provides @Singleton
+    fun cacheFile(context: Context): File = File(context.cacheDir, "okhttp_cache")
 
 }

@@ -1,7 +1,7 @@
 package com.troshchiy.gitbook.di
 
 import com.troshchiy.gitbook.di.scope.ActivityScoped
-import com.troshchiy.gitbook.ui.MainActivity
+import com.troshchiy.gitbook.ui.books.MainActivity
 import dagger.Module
 import dagger.android.ContributesAndroidInjector
 
