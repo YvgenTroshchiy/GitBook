@@ -1,4 +1,4 @@
-package com.troshchiy.gitbook.models
+package com.troshchiy.gitbook.network.models
 
 import android.annotation.SuppressLint
 import android.os.Parcelable

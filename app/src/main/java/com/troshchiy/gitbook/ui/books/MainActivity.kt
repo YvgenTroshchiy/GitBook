@@ -6,7 +6,7 @@ import com.troshchiy.gitbook.domain.SimpleCallback
 import com.troshchiy.gitbook.extensions.getLogTag
 import com.troshchiy.gitbook.extensions.logE
 import com.troshchiy.gitbook.extensions.logW
-import com.troshchiy.gitbook.models.Book
+import com.troshchiy.gitbook.network.models.Book
 import dagger.android.support.DaggerAppCompatActivity
 import io.reactivex.functions.Consumer
 import org.jetbrains.anko.toast

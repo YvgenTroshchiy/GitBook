@@ -1,4 +1,4 @@
-package com.troshchiy.gitbook.models
+package com.troshchiy.gitbook.ui.books
 
 import android.databinding.BaseObservable
 import io.reactivex.disposables.CompositeDisposable

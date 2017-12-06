@@ -2,7 +2,7 @@ package com.troshchiy.gitbook.ui.books
 
 import com.troshchiy.gitbook.domain.UseCase
 import com.troshchiy.gitbook.extensions.transformer
-import com.troshchiy.gitbook.models.Book
+import com.troshchiy.gitbook.network.models.Book
 import io.reactivex.disposables.Disposable
 
 class BooksUseCase constructor(callback: Callback<List<Book>>) : UseCase<Unit?, List<Book>>(callback) {
