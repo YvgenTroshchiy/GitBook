@@ -31,21 +31,20 @@ abstract class MyDisposableObserver<T>(val view: LoadDataView) : DisposableObser
             is HttpException -> {
                 val responseBody = t.response().errorBody()
                 val errorMessage = if (responseBody != null) errorMessage(responseBody) else ""
-                view?.showError(errorMessage)
                 logD(tag, "HttpException: $errorMessage")
-
+                view?.showError(errorMessage)
             }
             is SocketTimeoutException -> {
-                //                view.onTimeout()
                 logD(tag, "SocketTimeoutException: ${t.message}")
+                view?.showError("SocketTimeoutException")
             }
             is IOException -> {
-                //            view.onNetworkError()
                 logD(tag, "IOException: ${t.message}")
+                view?.showError("IOException")
             }
             else -> {
-                //                view.onUnknownError(t.message)
                 logD(tag, "onUnknownError: ${t.message}")
+                view?.showError("onUnknownError")
             }
         }
     }
