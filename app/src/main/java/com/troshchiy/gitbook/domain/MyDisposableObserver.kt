@@ -10,6 +10,7 @@ import java.io.IOException
 import java.lang.ref.WeakReference
 import java.net.SocketTimeoutException
 
+//TODO: Rename, maybe CallbackWrapper, DisposableErrorableObserver ?
 abstract class MyDisposableObserver<T>(val view: LoadDataView) : DisposableObserver<T>() {
     private val tag = this.javaClass.simpleName
 
