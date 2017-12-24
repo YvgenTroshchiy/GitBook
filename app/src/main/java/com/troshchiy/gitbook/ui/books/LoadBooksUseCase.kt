@@ -9,7 +9,7 @@ import com.troshchiy.gitbook.network.models.Book
 import com.troshchiy.gitbook.network.models.Books
 import io.reactivex.disposables.Disposable
 
-class BooksUseCase constructor(val onSuccess: (List<Book>) -> (Unit), val view: LoadDataView) : UseCase() {
+class LoadBooksUseCase constructor(val onSuccess: (List<Book>) -> (Unit), val view: LoadDataView) : UseCase() {
 
     fun execute() = execute(null)
 

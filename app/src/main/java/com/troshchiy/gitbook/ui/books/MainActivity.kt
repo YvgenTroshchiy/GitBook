@@ -21,7 +21,7 @@ class MainActivity : DaggerAppCompatActivity(), LoadDataView {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        disposables.add(BooksUseCase(::handleBooks, this).execute())
+        disposables.add(LoadBooksUseCase(::handleBooks, this).execute())
     }
 
     private fun handleBooks(books: List<Book>) {
