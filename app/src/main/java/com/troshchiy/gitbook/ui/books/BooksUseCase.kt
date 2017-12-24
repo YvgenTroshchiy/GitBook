@@ -17,6 +17,7 @@ class BooksUseCase constructor(val onSuccess: (List<Book>) -> (Unit), val view: 
             .gitBookService()
             .allBooks()
             .compose { transformer(it) }
+            .doOnNext { view.showLoadingProgress() }
             .subscribeWith(object : MyDisposableObserver<Books>(view) {
                 override fun onSuccess(books: Books) {
                     onSuccess(books.list)

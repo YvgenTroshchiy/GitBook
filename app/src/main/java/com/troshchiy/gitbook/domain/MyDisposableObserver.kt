@@ -17,15 +17,21 @@ abstract class MyDisposableObserver<T>(val view: LoadDataView) : DisposableObser
 
     protected abstract fun onSuccess(data: T)
 
-    override fun onComplete() {}
+    override fun onComplete() {
+        view.hideLoadingProgress()
+    }
 
     override fun onNext(data: T) {
+        view.hideLoadingProgress()
+
         // You can return StatusCodes of different cases from your API and handle it here.
         // I usually include these cases on BaseResponse and iherit it from every Response
         onSuccess(data)
     }
 
     override fun onError(t: Throwable) {
+        view.hideLoadingProgress()
+
         val view = loadDataView.get()
         when (t) {
             is HttpException -> {

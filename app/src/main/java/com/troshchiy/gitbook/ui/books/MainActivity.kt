@@ -5,6 +5,7 @@ import com.tickengo.rider.base_mvp_interfaces.LoadDataView
 import com.troshchiy.gitbook.R
 import com.troshchiy.gitbook.extensions.getLogTag
 import com.troshchiy.gitbook.extensions.logE
+import com.troshchiy.gitbook.extensions.logI
 import com.troshchiy.gitbook.extensions.logW
 import com.troshchiy.gitbook.network.models.Book
 import dagger.android.support.DaggerAppCompatActivity
@@ -16,8 +17,14 @@ class MainActivity : DaggerAppCompatActivity(), LoadDataView {
 
     private val disposables = CompositeDisposable()
 
-    override fun showLoadingProgress() {}
-    override fun hideLoadingProgress() {}
+    override fun showLoadingProgress() {
+        logI(tag, "showLoadingProgress")
+    }
+
+    override fun hideLoadingProgress() {
+        logI(tag, "hideLoadingProgress")
+    }
+
     override fun showError(message: String) {
         logE(tag, "error: $message")
         toast(message)
