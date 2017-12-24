@@ -17,21 +17,6 @@ class MainActivity : DaggerAppCompatActivity(), LoadDataView {
 
     private val disposables = CompositeDisposable()
 
-    override fun showLoadingProgress() {
-        logI(tag, "showLoadingProgress")
-    }
-
-    override fun hideLoadingProgress() {
-        logI(tag, "hideLoadingProgress")
-    }
-
-    override fun showError(message: String) {
-        logE(tag, "error: $message")
-        toast(message)
-    }
-
-    override fun hideError() {}
-
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
@@ -47,4 +32,19 @@ class MainActivity : DaggerAppCompatActivity(), LoadDataView {
         super.onStop()
         disposables.dispose()
     }
+
+    override fun showLoadingProgress() {
+        logI(tag, "showLoadingProgress")
+    }
+
+    override fun hideLoadingProgress() {
+        logI(tag, "hideLoadingProgress")
+    }
+
+    override fun showError(message: String) {
+        logE(tag, "error: $message")
+        toast(message)
+    }
+
+    override fun hideError() {}
 }
