@@ -13,14 +13,17 @@ class BooksUseCase constructor(val onSuccess: (List<Book>) -> (Unit), val view: 
 
     fun execute() = execute(null)
 
-    override fun execute(request: Any?): Disposable = component
-            .gitBookService()
-            .allBooks()
-            .compose { transformer(it) }
-            .doOnNext { view.showLoadingProgress() }
-            .subscribeWith(object : MyDisposableObserver<Books>(view) {
-                override fun onSuccess(books: Books) {
-                    onSuccess(books.list)
-                }
-            })
+    override fun execute(request: Any?): Disposable {
+        view.showLoadingProgress()
+
+        return component
+                .gitBookService()
+                .allBooks()
+                .compose { transformer(it) }
+                .subscribeWith(object : MyDisposableObserver<Books>(view) {
+                    override fun onSuccess(books: Books) {
+                        onSuccess(books.list)
+                    }
+                })
+    }
 }
