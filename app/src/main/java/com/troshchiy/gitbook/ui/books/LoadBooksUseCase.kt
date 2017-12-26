@@ -2,7 +2,7 @@ package com.troshchiy.gitbook.ui.books
 
 import com.tickengo.rider.base_mvp_interfaces.LoadDataView
 import com.troshchiy.gitbook.App.Companion.component
-import com.troshchiy.gitbook.domain.DisposableLoadDataObserver
+import com.troshchiy.gitbook.network.DisposableLoadDataObserver
 import com.troshchiy.gitbook.domain.UseCase
 import com.troshchiy.gitbook.extensions.transformer
 import com.troshchiy.gitbook.network.models.Book

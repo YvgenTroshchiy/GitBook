@@ -1,9 +1,8 @@
-package com.troshchiy.gitbook.domain
+package com.troshchiy.gitbook.network
 
 import com.tickengo.rider.base_mvp_interfaces.LoadDataView
 import com.troshchiy.gitbook.extensions.logD
 import com.troshchiy.gitbook.extensions.logI
-import com.troshchiy.gitbook.network.DisposableManager
 import io.reactivex.observers.DisposableObserver
 import okhttp3.ResponseBody
 import org.json.JSONObject
