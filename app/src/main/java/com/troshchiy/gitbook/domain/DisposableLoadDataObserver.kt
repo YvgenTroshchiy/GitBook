@@ -2,6 +2,8 @@ package com.troshchiy.gitbook.domain
 
 import com.tickengo.rider.base_mvp_interfaces.LoadDataView
 import com.troshchiy.gitbook.extensions.logD
+import com.troshchiy.gitbook.extensions.logI
+import com.troshchiy.gitbook.network.DisposableManager
 import io.reactivex.observers.DisposableObserver
 import okhttp3.ResponseBody
 import org.json.JSONObject
@@ -10,22 +12,22 @@ import java.io.IOException
 import java.lang.ref.WeakReference
 import java.net.SocketTimeoutException
 
-abstract class DisposableLoadDataObserver<T>(val view: LoadDataView) : DisposableObserver<T>() {
-    private val tag = this.javaClass.simpleName
+abstract class DisposableLoadDataObserver<T>(private val view: LoadDataView) : DisposableObserver<T>() {
+    private val tag = DisposableLoadDataObserver::class.java.simpleName
 
     private val loadDataView: WeakReference<LoadDataView> = WeakReference(view)
 
     protected abstract fun onSuccess(data: T)
 
-    override fun onComplete() {
-        view.hideLoadingProgress()
+    override fun onStart() {
+        super.onStart()
+        logI(tag, "onStart")
+        DisposableManager.add(this)
     }
 
     override fun onNext(data: T) {
         view.hideLoadingProgress()
-
-        // You can return StatusCodes of different cases from your API and handle it here.
-        // I usually include these cases on BaseResponse and iherit it from every Response
+        // Nice place for add log to Firebase, Answers
         onSuccess(data)
     }
 
@@ -59,5 +61,9 @@ abstract class DisposableLoadDataObserver<T>(val view: LoadDataView) : Disposabl
         JSONObject(responseBody.string()).getString("message")
     } catch (e: Exception) {
         e.message.toString()
+    }
+
+    override fun onComplete() {
+        view.hideLoadingProgress()
     }
 }
