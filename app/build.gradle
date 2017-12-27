@@ -30,8 +30,10 @@ android {
 
 androidExtensions { experimental = true }
 
-ext.support_library_version = "26.1.0"
-ext.daggerVersion = '2.11'
+ext {
+    support_library_version = "26.1.0"
+    daggerVersion = '2.11'
+}
 
 dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
@@ -43,7 +45,7 @@ dependencies {
     implementation 'com.android.support.constraint:constraint-layout:1.0.2'
     implementation 'com.github.bumptech.glide:glide:4.3.1'
     implementation "org.jetbrains.anko:anko:0.10.3"
-//    kapt "com.android.databiding:compiler:2.3.0"
+    kapt "com.android.databinding:compiler:3.0.1"
 
     // Dagger
     implementation "com.google.dagger:dagger:$daggerVersion"
@@ -59,7 +61,7 @@ dependencies {
     annotationProcessor "com.google.dagger:dagger-android-processor:$daggerVersion"
 
     // RxJava
-    implementation "io.reactivex.rxjava2:rxjava:2.1.6"
+    implementation "io.reactivex.rxjava2:rxjava:2.1.7"
     implementation('io.reactivex.rxjava2:rxandroid:2.0.1') {
         exclude group: 'io.reactivex', module: 'rxjava'
     }
@@ -71,7 +73,7 @@ dependencies {
     implementation('com.squareup.retrofit2:converter-gson:2.3.0') {
         exclude group: 'com.google.code.gson'
     }
-    implementation 'com.squareup.okhttp3:logging-interceptor:3.8.0'
+    implementation 'com.squareup.okhttp3:logging-interceptor:3.9.1'
 
     // Tests
     testImplementation 'junit:junit:4.12'
