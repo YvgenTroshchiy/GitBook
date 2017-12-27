@@ -6,14 +6,12 @@
 
     <data>
 
-        <variable name="book" type="com.troshchiy.gitbook.models.Book" />
+        <variable name="book" type="com.troshchiy.gitbook.network.models.Book" />
     </data>
 
     <android.support.v7.widget.RecyclerView
-        android:id="@+id/rlv"
+        android:id="@+id/recyclerView"
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
-
-    </android.support.v7.widget.RecyclerView>
+        android:layout_height="match_parent" />
 
 </layout>
