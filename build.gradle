@@ -31,7 +31,7 @@ task clean(type: Delete) {
 allprojects {
     afterEvaluate {
         tasks.withType(JavaCompile.class) {
-            options.compilerArgs << "-Xmaxerrs" << "500"
+            options.compilerArgs << "-Xlint:unchecked" << "-Xmaxerrs" << "500"
         }
     }
 }

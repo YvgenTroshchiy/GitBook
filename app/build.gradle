@@ -32,7 +32,7 @@ androidExtensions { experimental = true }
 
 ext {
     support_library_version = "26.1.0"
-    daggerVersion = '2.11'
+    daggerVersion = '2.13'
 }
 
 dependencies {
@@ -43,8 +43,8 @@ dependencies {
     implementation "com.android.support:appcompat-v7:$support_library_version"
     implementation "com.android.support:recyclerview-v7:$support_library_version"
     implementation 'com.android.support.constraint:constraint-layout:1.0.2'
-    implementation 'com.github.bumptech.glide:glide:4.3.1'
-    implementation "org.jetbrains.anko:anko:0.10.3"
+    //    implementation 'com.github.bumptech.glide:glide:4.4.0'
+    implementation 'org.jetbrains.anko:anko:0.10.3'
     kapt "com.android.databinding:compiler:3.0.1"
 
     // Dagger
@@ -61,7 +61,7 @@ dependencies {
     annotationProcessor "com.google.dagger:dagger-android-processor:$daggerVersion"
 
     // RxJava
-    implementation "io.reactivex.rxjava2:rxjava:2.1.7"
+    implementation 'io.reactivex.rxjava2:rxjava:2.1.7'
     implementation('io.reactivex.rxjava2:rxandroid:2.0.1') {
         exclude group: 'io.reactivex', module: 'rxjava'
     }
