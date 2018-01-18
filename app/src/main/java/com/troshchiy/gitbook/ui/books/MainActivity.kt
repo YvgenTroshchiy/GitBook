@@ -37,7 +37,7 @@ class MainActivity : LoadDataActivity() {
 
     private fun handleBooks(books: List<Book>) {
         debug { "Books size: ${books.size}" }
-        adapter?.data = books
+        adapter?.books = books
     }
 
     override fun showLoadingProgress() {

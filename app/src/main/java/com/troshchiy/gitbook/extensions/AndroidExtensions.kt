@@ -1,5 +1,6 @@
 package com.troshchiy.gitbook.extensions
 
+import android.content.Context
 import android.os.StrictMode
 import android.view.LayoutInflater
 import android.view.View
@@ -17,6 +18,8 @@ fun setStrictMode() {
             .penaltyDeath()
             .build())
 }
+
+fun Context.inflater(): LayoutInflater = LayoutInflater.from(this)
 
 fun ViewGroup.inflate(layoutId: Int, attachToRoot: Boolean = false): View =
         LayoutInflater.from(context).inflate(layoutId, this, attachToRoot)
