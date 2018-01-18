@@ -21,6 +21,7 @@ abstract class DisposableLoadDataObserver<T>(private val view: LoadDataView) : D
     override fun onStart() {
         super.onStart()
         logI(tag, "onStart")
+        view.showLoadingProgress()
         DisposableManager.add(this)
     }
 
