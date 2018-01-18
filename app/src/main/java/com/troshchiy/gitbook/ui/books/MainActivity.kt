@@ -22,7 +22,7 @@ class MainActivity : LoadDataActivity() {
 
         setupRecyclerView()
 
-        LoadBooksUseCase(::handleBooks, this).execute()
+        LoadBooksUseCase(this, ::handleBooks).execute()
     }
 
     private fun setupRecyclerView() {
