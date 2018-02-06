@@ -16,6 +16,6 @@ When Dagger.Android annotation processor runs it will create subcomponents for u
 abstract class ActivityBindingModule {
 
     @ActivityScoped
-    @ContributesAndroidInjector(modules = [NetworkModule::class])
+    @ContributesAndroidInjector(modules = [GitBookServiceModule::class])
     internal abstract fun mainActivity(): MainActivity
 }
