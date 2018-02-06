@@ -1,0 +1,269 @@
+{
+  "list": [
+    {
+      "id": "samypesse/how-to-create-an-operating-system",
+      "status": "published",
+      "name": "how-to-create-an-operating-system",
+      "title": "How to make an Operating System",
+      "description": "Learn how to write, test and run, an operating system in C++ and Assembly from scratch.",
+      "public": true,
+      "template": "base",
+      "topics": [
+        "programming",
+        "operating-system",
+        "c-c-plus-plus"
+      ],
+      "license": "apache-2",
+      "language": "en",
+      "locked": false,
+      "cover": {
+        "large": "/cover/book/samypesse/how-to-create-an-operating-system.jpg?build=1475412619608",
+        "small": "/cover/book/samypesse/how-to-create-an-operating-system.jpg?build=1475412619608&size=small"
+      },
+      "urls": {
+        "git": "https://git.gitbook.com/samypesse/how-to-create-an-operating-system.git",
+        "access": "https://www.gitbook.com/book/samypesse/how-to-create-an-operating-system",
+        "homepage": "https://samypesse.gitbooks.io/how-to-create-an-operating-system/",
+        "read": "https://www.gitbook.com/read/book/samypesse/how-to-create-an-operating-system",
+        "edit": "https://www.gitbook.com/book/samypesse/how-to-create-an-operating-system/edit",
+        "content": "https://samypesse.gitbooks.io/how-to-create-an-operating-system/content/",
+        "download": {
+          "epub": "https://www.gitbook.com/download/epub/book/samypesse/how-to-create-an-operating-system",
+          "mobi": "https://www.gitbook.com/download/mobi/book/samypesse/how-to-create-an-operating-system",
+          "pdf": "https://www.gitbook.com/download/pdf/book/samypesse/how-to-create-an-operating-system"
+        }
+      },
+      "counts": {
+        "stars": 2041,
+        "subscriptions": 544,
+        "updates": 81,
+        "discussions": 24,
+        "changeRequests": 0
+      },
+      "dates": {
+        "build": "2016-10-02T12:50:19.608Z",
+        "created": "2014-05-20T01:21:08.289Z"
+      },
+      "permissions": {
+        "edit": false,
+        "admin": false,
+        "important": false
+      },
+      "publish": {
+        "ebooks": true,
+        "defaultBranch": null,
+        "builder": null
+      },
+      "author": {
+        "id": "537aadc0556aa60200379f23",
+        "type": "User",
+        "username": "samypesse",
+        "name": "Samy Pessé",
+        "location": "Lyon, France",
+        "website": "http://samypesse.fr/",
+        "bio": "French guy, Co-founder of GitBook",
+        "verified": true,
+        "locked": false,
+        "site_admin": true,
+        "urls": {
+          "profile": "https://www.gitbook.com/@samypesse",
+          "stars": "https://www.gitbook.com/@samypesse/starred",
+          "avatar": "https://www.gitbook.com/@samypesse/avatar"
+        },
+        "permissions": {
+          "edit": null,
+          "admin": null
+        },
+        "dates": {
+          "created": "2014-05-20T01:20:00.478Z"
+        },
+        "counts": {},
+        "twitter": {
+          "username": "SamyPesse"
+        },
+        "github": {
+          "username": "SamyPesse"
+        },
+        "google": {},
+        "facebook": {}
+      }
+    },
+    {
+      "id": "samypesse/heroku-node",
+      "status": "published",
+      "name": "heroku-node",
+      "title": "Heroku + Node.JS",
+      "description": "Learn how to build and deploy Node.JS applications on Heroku.",
+      "public": true,
+      "template": "base",
+      "topics": [
+        "heroku",
+        "javascript",
+        "nodejs",
+        "paas"
+      ],
+      "license": "apache-2",
+      "language": "en",
+      "locked": false,
+      "cover": {
+        "large": "/cover/book/samypesse/heroku-node.jpg?build=1448062255638",
+        "small": "/cover/book/samypesse/heroku-node.jpg?build=1448062255638&size=small"
+      },
+      "urls": {
+        "git": "https://git.gitbook.com/samypesse/heroku-node.git",
+        "access": "https://www.gitbook.com/book/samypesse/heroku-node",
+        "homepage": "https://samypesse.gitbooks.io/heroku-node/",
+        "read": "https://www.gitbook.com/read/book/samypesse/heroku-node",
+        "edit": "https://www.gitbook.com/book/samypesse/heroku-node/edit",
+        "content": "https://samypesse.gitbooks.io/heroku-node/content/",
+        "download": {
+          "epub": "https://www.gitbook.com/download/epub/book/samypesse/heroku-node",
+          "mobi": "https://www.gitbook.com/download/mobi/book/samypesse/heroku-node",
+          "pdf": "https://www.gitbook.com/download/pdf/book/samypesse/heroku-node"
+        }
+      },
+      "counts": {
+        "stars": 74,
+        "subscriptions": 11,
+        "updates": 41,
+        "discussions": 1,
+        "changeRequests": 0
+      },
+      "dates": {
+        "build": "2015-11-20T23:30:55.638Z",
+        "created": "2014-05-23T12:02:16.988Z"
+      },
+      "permissions": {
+        "edit": false,
+        "admin": false,
+        "important": false
+      },
+      "publish": {
+        "ebooks": true,
+        "defaultBranch": null,
+        "builder": null
+      },
+      "author": {
+        "id": "537aadc0556aa60200379f23",
+        "type": "User",
+        "username": "samypesse",
+        "name": "Samy Pessé",
+        "location": "Lyon, France",
+        "website": "http://samypesse.fr/",
+        "bio": "French guy, Co-founder of GitBook",
+        "verified": true,
+        "locked": false,
+        "site_admin": true,
+        "urls": {
+          "profile": "https://www.gitbook.com/@samypesse",
+          "stars": "https://www.gitbook.com/@samypesse/starred",
+          "avatar": "https://www.gitbook.com/@samypesse/avatar"
+        },
+        "permissions": {
+          "edit": null,
+          "admin": null
+        },
+        "dates": {
+          "created": "2014-05-20T01:20:00.478Z"
+        },
+        "counts": {},
+        "twitter": {
+          "username": "SamyPesse"
+        },
+        "github": {
+          "username": "SamyPesse"
+        },
+        "google": {},
+        "facebook": {}
+      }
+    },
+    {
+      "id": "samypesse/js-promises",
+      "status": "published",
+      "name": "js-promises",
+      "title": "Javascript Promises",
+      "description": "Learn how to use Promises in Javascript (Node.js, Browser & jQuery).",
+      "public": true,
+      "template": "base",
+      "topics": [
+        "javascript",
+        "programming",
+        "nodejs"
+      ],
+      "license": "nolicense",
+      "language": "en",
+      "locked": false,
+      "cover": {
+        "large": "/cover/book/samypesse/js-promises.jpg?build=1416963490214",
+        "small": "/cover/book/samypesse/js-promises.jpg?build=1416963490214&size=small"
+      },
+      "urls": {
+        "git": "https://git.gitbook.com/samypesse/js-promises.git",
+        "access": "https://www.gitbook.com/book/samypesse/js-promises",
+        "homepage": "https://samypesse.gitbooks.io/js-promises/",
+        "read": "https://www.gitbook.com/read/book/samypesse/js-promises",
+        "edit": "https://www.gitbook.com/book/samypesse/js-promises/edit",
+        "content": "https://samypesse.gitbooks.io/js-promises/content/",
+        "download": {
+          "epub": "https://www.gitbook.com/download/epub/book/samypesse/js-promises",
+          "mobi": "https://www.gitbook.com/download/mobi/book/samypesse/js-promises",
+          "pdf": "https://www.gitbook.com/download/pdf/book/samypesse/js-promises"
+        }
+      },
+      "counts": {
+        "stars": 140,
+        "subscriptions": 26,
+        "updates": 0,
+        "discussions": 0,
+        "changeRequests": 0
+      },
+      "dates": {
+        "build": "2014-11-26T00:58:10.214Z",
+        "created": "2014-06-14T10:08:22.815Z"
+      },
+      "permissions": {
+        "edit": false,
+        "admin": false,
+        "important": false
+      },
+      "publish": {
+        "ebooks": true,
+        "defaultBranch": null,
+        "builder": null
+      },
+      "author": {
+        "id": "537aadc0556aa60200379f23",
+        "type": "User",
+        "username": "samypesse",
+        "name": "Samy Pessé",
+        "location": "Lyon, France",
+        "website": "http://samypesse.fr/",
+        "bio": "French guy, Co-founder of GitBook",
+        "verified": true,
+        "locked": false,
+        "site_admin": true,
+        "urls": {
+          "profile": "https://www.gitbook.com/@samypesse",
+          "stars": "https://www.gitbook.com/@samypesse/starred",
+          "avatar": "https://www.gitbook.com/@samypesse/avatar"
+        },
+        "permissions": {
+          "edit": null,
+          "admin": null
+        },
+        "dates": {
+          "created": "2014-05-20T01:20:00.478Z"
+        },
+        "counts": {},
+        "twitter": {
+          "username": "SamyPesse"
+        },
+        "github": {
+          "username": "SamyPesse"
+        },
+        "google": {},
+        "facebook": {}
+      }
+    }
+  ]
+}

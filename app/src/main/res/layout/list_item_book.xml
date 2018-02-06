@@ -13,8 +13,9 @@
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="110dp"
+        android:layout_height="wrap_content"
         android:gravity="center_vertical"
+        android:minHeight="110dp"
         android:orientation="vertical">
 
         <TextView
@@ -22,21 +23,25 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@{book.title}"
-            tools:text="@sample/Book.json/title" />
+            android:textColor="#000"
+            android:textSize="17sp"
+            tools:text="@sample/books.json/list/title" />
 
         <TextView
             android:id="@+id/tv_description"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@{book.description}"
-            tools:text="@sample/Book.json/description" />
+            tools:text="@sample/books.json/list/description" />
 
         <TextView
             android:id="@+id/tv_authorName"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@{book.description}"
-            tools:text="@sample/Book.json/author/name" />
+            android:textColor="#bebebe"
+            android:textStyle="italic"
+            tools:text="@sample/books.json/list/author/name" />
 
         <TextView
             android:id="@+id/tv_cover"
@@ -57,7 +62,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@{book.counts.stars}"
-            tools:text="@sample/Book.json/counts/stars" />
+            tools:text="@sample/books.json/list/counts/stars" />
 
     </LinearLayout>
 
