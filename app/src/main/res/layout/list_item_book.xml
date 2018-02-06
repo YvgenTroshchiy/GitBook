@@ -6,7 +6,9 @@
 
     <data>
 
-        <variable name="book" type="com.troshchiy.gitbook.network.models.Book" />
+        <variable
+            name="book"
+            type="com.troshchiy.gitbook.network.models.Book" />
     </data>
 
     <LinearLayout
@@ -16,39 +18,46 @@
         android:orientation="vertical">
 
         <TextView
-            android:id="@+id/title"
+            android:id="@+id/tv_title"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@{book.title}"
-            tools:text="title" />
+            tools:text="@sample/Book.json/title" />
 
         <TextView
-            android:id="@+id/description"
+            android:id="@+id/tv_description"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@{book.description}"
-            tools:text="description" />
+            tools:text="@sample/Book.json/description" />
 
         <TextView
-            android:id="@+id/cover"
+            android:id="@+id/tv_authorName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@{book.description}"
+            tools:text="@sample/Book.json/author/name" />
+
+        <TextView
+            android:id="@+id/tv_cover"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             tools:text="cover" />
         <!--android:text="@{book.cover}"-->
 
         <TextView
-            android:id="@+id/urls"
+            android:id="@+id/tv_urls"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             tools:text="urls" />
         <!--android:text="@{book.urls}"-->
 
         <TextView
-            android:id="@+id/counts"
+            android:id="@+id/tv_stars"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            tools:text="counts" />
-        <!--android:text="@{book.counts}"-->
+            android:text="@{book.counts.stars}"
+            tools:text="@sample/Book.json/counts/stars" />
 
     </LinearLayout>
 
