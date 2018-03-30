@@ -15,6 +15,7 @@ class LoadBooksUseCase constructor(val view: LoadDataView, val onSuccess: (List<
 
     override fun execute(request: Any?): Disposable {
 
+        //TODO: component should be passed thought constructor
         return component
                 .gitBookService()
                 .allBooks()
